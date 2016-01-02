@@ -14,6 +14,7 @@
 		18E155A91C33484A0077F6FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E155A71C33484A0077F6FB /* LaunchScreen.storyboard */; };
 		18E155B41C33484A0077F6FB /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E155B31C33484A0077F6FB /* NotesTests.swift */; };
 		18E155BF1C33484A0077F6FB /* NotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E155BE1C33484A0077F6FB /* NotesUITests.swift */; };
+		BAFD06241C377B11000E87F3 /* SubjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD06231C377B11000E87F3 /* SubjectTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		18E155BA1C33484A0077F6FB /* NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E155BE1C33484A0077F6FB /* NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUITests.swift; sourceTree = "<group>"; };
 		18E155C01C33484A0077F6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAFD06231C377B11000E87F3 /* SubjectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubjectTableViewController.swift; path = ../SubjectTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				18E1559E1C33484A0077F6FB /* AppDelegate.swift */,
 				18E155A01C33484A0077F6FB /* ViewController.swift */,
+				BAFD06231C377B11000E87F3 /* SubjectTableViewController.swift */,
 				18E155A21C33484A0077F6FB /* Main.storyboard */,
 				18E155A51C33484A0077F6FB /* Assets.xcassets */,
 				18E155A71C33484A0077F6FB /* LaunchScreen.storyboard */,
@@ -189,7 +192,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Aaron Brown";
+				ORGANIZATIONNAME = "Aaron Brown and Akshay Srivatsan";
 				TargetAttributes = {
 					18E1559A1C33484A0077F6FB = {
 						CreatedOnToolsVersion = 7.2;
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFD06241C377B11000E87F3 /* SubjectTableViewController.swift in Sources */,
 				18E155A11C33484A0077F6FB /* ViewController.swift in Sources */,
 				18E1559F1C33484A0077F6FB /* AppDelegate.swift in Sources */,
 			);
@@ -484,6 +488,7 @@
 				18E155C51C33484A0077F6FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18E155C61C33484A0077F6FB /* Build configuration list for PBXNativeTarget "NotesTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				18E155C81C33484A0077F6FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18E155C91C33484A0077F6FB /* Build configuration list for PBXNativeTarget "NotesUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				18E155CB1C33484A0077F6FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
