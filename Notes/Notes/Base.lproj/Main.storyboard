@@ -5,6 +5,61 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--Notes Collection View Controller-->
+        <scene sceneID="2Yg-mZ-4ff">
+            <objects>
+                <collectionViewController id="dZQ-pJ-6iz" customClass="NotesCollectionViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="CVd-s0-5Kg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KgK-RJ-PED">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="25" minY="25" maxX="25" maxY="25"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NoteCell" id="3OU-rG-8gd" customClass="NoteCollectionViewCell" customModule="Notes" customModuleProvider="target">
+                                <rect key="frame" x="25" y="25" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBY-lM-bon">
+                                            <rect key="frame" x="32" y="71" width="37" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iqw-0L-6b7">
+                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="XBY-lM-bon" firstAttribute="centerX" secondItem="3OU-rG-8gd" secondAttribute="centerX" id="54f-eW-5kK"/>
+                                    <constraint firstItem="XBY-lM-bon" firstAttribute="centerY" secondItem="3OU-rG-8gd" secondAttribute="centerY" constant="32" id="8P1-HX-lga"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="iqw-0L-6b7" id="39I-kO-yHN"/>
+                                    <outlet property="label" destination="XBY-lM-bon" id="iHs-z3-9iK"/>
+                                    <segue destination="veW-Lu-1Mf" kind="show" id="vcH-v5-b7a"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dZQ-pJ-6iz" id="gmQ-Vb-AEU"/>
+                            <outlet property="delegate" destination="dZQ-pJ-6iz" id="NUR-oN-qnR"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQA-Vm-FL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="459"/>
+        </scene>
         <!--Note View Controller-->
         <scene sceneID="6Fk-z1-nrB">
             <objects>
@@ -33,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BzX-xc-R5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="451"/>
+            <point key="canvasLocation" x="1016" y="459"/>
         </scene>
         <!--Subjects-->
         <scene sceneID="CVC-8U-dcp">
@@ -51,6 +106,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="dZQ-pJ-6iz" kind="showDetail" id="BPK-mc-yXL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -62,7 +120,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZn-ye-SPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="-210"/>
+            <point key="canvasLocation" x="1016" y="-334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pt4-Fr-FZF">
@@ -78,7 +136,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWb-JX-vlr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="-210"/>
+            <point key="canvasLocation" x="196" y="-334"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="lRl-fO-Seh">
@@ -86,12 +144,15 @@
                 <splitViewController id="O38-wo-ZEX" sceneMemberID="viewController">
                     <connections>
                         <segue destination="LxJ-7E-e0A" kind="relationship" relationship="masterViewController" id="gDh-Ts-Q4c"/>
-                        <segue destination="veW-Lu-1Mf" kind="relationship" relationship="detailViewController" id="wGy-Po-xvb"/>
+                        <segue destination="dZQ-pJ-6iz" kind="relationship" relationship="detailViewController" id="Ncr-cb-rmA"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGY-58-Rs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-624" y="121"/>
+            <point key="canvasLocation" x="-624" y="57"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ncr-cb-rmA"/>
+    </inferredMetricsTieBreakers>
 </document>
