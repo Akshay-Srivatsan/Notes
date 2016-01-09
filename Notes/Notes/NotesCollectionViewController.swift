@@ -18,6 +18,9 @@ class NotesCollectionViewController: UICollectionViewController {
         "Swift",
         "C"
     ]
+    
+    // Saves the index of the item the user presses on in order to determine which note to display
+    var indexTapped = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +39,21 @@ class NotesCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showNote"
+        {
+            let destViewController = segue.destinationViewController as! NoteViewController
+            destViewController.noteText = notes[indexTapped]
+        }
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 
@@ -63,11 +72,11 @@ class NotesCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! NoteCollectionViewCell
     
         // Configure the cell
-        
         cell.backgroundColor = UIColor.lightGrayColor()
         cell.label.text = notes[indexPath.item]
-//        cell.label.backgroundColor = UIColor.grayColor()
-    
+        
+        
+
         return cell
     }
 
@@ -99,7 +108,14 @@ class NotesCollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
     
+        
     }
-    */
+*/
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        indexTapped = indexPath.item
+        performSegueWithIdentifier("showNote", sender: self)
+    }
+    
 
 }

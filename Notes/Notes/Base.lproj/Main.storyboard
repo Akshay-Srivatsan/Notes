@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O38-wo-ZEX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O38-wo-ZEX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -28,7 +28,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBY-lM-bon">
-                                            <rect key="frame" x="32" y="71" width="37" height="20.5"/>
+                                            <rect key="frame" x="32" y="71" width="37" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -46,7 +46,6 @@
                                 <connections>
                                     <outlet property="imageView" destination="iqw-0L-6b7" id="39I-kO-yHN"/>
                                     <outlet property="label" destination="XBY-lM-bon" id="iHs-z3-9iK"/>
-                                    <segue destination="veW-Lu-1Mf" kind="show" id="vcH-v5-b7a"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -55,6 +54,9 @@
                             <outlet property="delegate" destination="dZQ-pJ-6iz" id="NUR-oN-qnR"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <segue destination="veW-Lu-1Mf" kind="show" identifier="showNote" id="1en-zz-vIe"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQA-Vm-FL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,6 +87,9 @@
                             <constraint firstItem="qMI-DP-dqG" firstAttribute="top" secondItem="2dI-Le-tb3" secondAttribute="bottom" constant="33" id="tip-gg-iMh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noteLabel" destination="qMI-DP-dqG" id="5e2-wn-UcB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BzX-xc-R5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +108,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Na5-Gh-XPw" id="b4k-OT-kqu">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
