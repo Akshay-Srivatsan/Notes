@@ -9,16 +9,17 @@
 import UIKit
 
 class NoteViewController: UIViewController {
-
-    @IBOutlet weak var noteLabel: UILabel!
     
-    var noteText = String()
+    @IBOutlet var noteView: NoteView!
+    
+    var noteText: String = ""
+    var noteTitle: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        noteLabel.text = noteText
+        noteView.noteText = noteText
+        self.title = noteTitle
     }
 
     override func didReceiveMemoryWarning() {

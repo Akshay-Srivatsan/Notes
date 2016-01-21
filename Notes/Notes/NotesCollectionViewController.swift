@@ -50,7 +50,8 @@ class NotesCollectionViewController: UICollectionViewController {
         if segue.identifier == "showNote"
         {
             let destViewController = segue.destinationViewController as! NoteViewController
-            destViewController.noteText = notes[indexTapped]
+            destViewController.noteTitle = notes[indexTapped]
+            destViewController.noteText = "This is a note about \(notes[indexTapped])!\nomnia enim rerum principia parva sunt\ntu ne cede malis, sed contra audentior ito\nubi concordia, ibi victoria"
         }
     }
     
