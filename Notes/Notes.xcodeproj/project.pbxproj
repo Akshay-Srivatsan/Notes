@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183D9C6F1C5C46C700FA145D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D9C6E1C5C46C700FA145D /* Note.swift */; };
 		18E1559F1C33484A0077F6FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1559E1C33484A0077F6FB /* AppDelegate.swift */; };
 		18E155A11C33484A0077F6FB /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E155A01C33484A0077F6FB /* NoteViewController.swift */; };
 		18E155A41C33484A0077F6FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E155A21C33484A0077F6FB /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183D9C6E1C5C46C700FA145D /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		18E1559B1C33484A0077F6FB /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E1559E1C33484A0077F6FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18E155A01C33484A0077F6FB /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183D9C6D1C5C469500FA145D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				183D9C6E1C5C46C700FA145D /* Note.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		18E155921C33484A0077F6FB = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		18E1559D1C33484A0077F6FB /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				183D9C6D1C5C469500FA145D /* Entities */,
 				18E1559E1C33484A0077F6FB /* AppDelegate.swift */,
 				18E155A01C33484A0077F6FB /* NoteViewController.swift */,
 				BAC099231C507B37006B0F0D /* NoteView.swift */,
@@ -345,6 +356,7 @@
 			files = (
 				BAFD06241C377B11000E87F3 /* SubjectTableViewController.swift in Sources */,
 				18E155A11C33484A0077F6FB /* NoteViewController.swift in Sources */,
+				183D9C6F1C5C46C700FA145D /* Note.swift in Sources */,
 				BAC099241C507B37006B0F0D /* NoteView.swift in Sources */,
 				BA7941CC1C3B77CA00F08D57 /* NoteCollectionViewCell.swift in Sources */,
 				BA7941CA1C3B731F00F08D57 /* NotesCollectionViewController.swift in Sources */,
