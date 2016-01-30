@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		183D9C6F1C5C46C700FA145D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D9C6E1C5C46C700FA145D /* Note.swift */; };
+		183D9C711C5C4A2000FA145D /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D9C701C5C4A2000FA145D /* NewNoteViewController.swift */; };
 		18E1559F1C33484A0077F6FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1559E1C33484A0077F6FB /* AppDelegate.swift */; };
 		18E155A11C33484A0077F6FB /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E155A01C33484A0077F6FB /* NoteViewController.swift */; };
 		18E155A41C33484A0077F6FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E155A21C33484A0077F6FB /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		183D9C6E1C5C46C700FA145D /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		183D9C701C5C4A2000FA145D /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		18E1559B1C33484A0077F6FB /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E1559E1C33484A0077F6FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18E155A01C33484A0077F6FB /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				18E155A51C33484A0077F6FB /* Assets.xcassets */,
 				18E155A71C33484A0077F6FB /* LaunchScreen.storyboard */,
 				18E155AA1C33484A0077F6FB /* Info.plist */,
+				183D9C701C5C4A2000FA145D /* NewNoteViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				183D9C6F1C5C46C700FA145D /* Note.swift in Sources */,
 				BAC099241C507B37006B0F0D /* NoteView.swift in Sources */,
 				BA7941CC1C3B77CA00F08D57 /* NoteCollectionViewCell.swift in Sources */,
+				183D9C711C5C4A2000FA145D /* NewNoteViewController.swift in Sources */,
 				BA7941CA1C3B731F00F08D57 /* NotesCollectionViewController.swift in Sources */,
 				18E1559F1C33484A0077F6FB /* AppDelegate.swift in Sources */,
 			);

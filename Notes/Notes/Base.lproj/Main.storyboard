@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Notes Collection View Controller-->
@@ -76,15 +77,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c6V-Xf-FSN">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c6V-Xf-FSN">
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNg-0e-mq5">
+                                <rect key="frame" x="220" y="0.0" width="160" height="30"/>
+                                <state key="normal" title="Temp New Note Button"/>
+                                <connections>
+                                    <segue destination="76g-jC-9El" kind="show" id="xvf-Ci-evn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hNg-0e-mq5" firstAttribute="centerX" secondItem="c2r-2E-V3h" secondAttribute="centerX" id="5mU-j3-8dV"/>
+                            <constraint firstItem="hNg-0e-mq5" firstAttribute="top" secondItem="c2r-2E-V3h" secondAttribute="top" id="6wB-GH-o4D"/>
+                            <constraint firstAttribute="bottom" secondItem="c6V-Xf-FSN" secondAttribute="bottom" constant="20" symbolic="YES" id="Cnx-SO-eYQ"/>
+                            <constraint firstItem="c6V-Xf-FSN" firstAttribute="leading" secondItem="c2r-2E-V3h" secondAttribute="leadingMargin" id="Q3a-aD-vYa"/>
+                            <constraint firstItem="hNg-0e-mq5" firstAttribute="centerX" secondItem="c6V-Xf-FSN" secondAttribute="centerX" id="s93-8y-0H1"/>
+                            <constraint firstItem="c6V-Xf-FSN" firstAttribute="top" secondItem="2dI-Le-tb3" secondAttribute="bottom" id="vxU-WX-FkK"/>
+                        </constraints>
                         <connections>
                             <outlet property="textView" destination="c6V-Xf-FSN" id="UkX-J0-QLp"/>
                         </connections>
@@ -96,6 +112,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BzX-xc-R5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1016" y="459"/>
+        </scene>
+        <!--New Note View Controller-->
+        <scene sceneID="Jki-kq-WWk">
+            <objects>
+                <viewController id="76g-jC-9El" customClass="NewNoteViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nhg-G0-kKq"/>
+                        <viewControllerLayoutGuide type="bottom" id="BaN-pR-Vpd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bw4-wD-v1z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Km-2O-PFT">
+                                <rect key="frame" x="472" y="28" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="76g-jC-9El" eventType="touchUpInside" id="yMp-h0-Vn2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Km-2O-PFT" firstAttribute="top" secondItem="Nhg-G0-kKq" secondAttribute="bottom" constant="8" symbolic="YES" id="ROZ-7O-nNk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Km-2O-PFT" secondAttribute="trailing" constant="74" id="f0K-aE-A3F"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJj-YW-wZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="459"/>
         </scene>
         <!--Subjects-->
         <scene sceneID="CVC-8U-dcp">
